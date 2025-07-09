@@ -1,0 +1,12 @@
+# Ignore environment variables file
+.env
+
+mock_api_call.py
+
+# Ignore Python cache files and compiled files
+__pycache__/
+*.pyc
+
+# Ignore virtual environment folders (if you use one)
+venv/
+*.venv

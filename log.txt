@@ -1,0 +1,6 @@
+INFO: 2023-10-27 10:00:01 - user_id:54321 - New deposit initiated: transaction_id:dep_abc123
+INFO: 2023-10-27 10:02:30 - user_id:12345 - Withdrawal request received: transaction_id:wd_xyz789, amount:1.5, asset:BTC
+WARN: 2023-10-27 10:02:35 - user_id:12345 - Low balance check for transaction_id:wd_xyz789
+ERROR: 2023-10-27 10:02:40 - user_id:12345 - Insufficient funds for transaction_id:wd_xyz789
+INFO: 2023-10-27 10:05:00 - user_id:12345 - Login success from IP 8.8.8.8
+ERROR: 2023-10-27 10:06:15 - user_id:98765 - Invalid address format for transaction_id:wd_qwe456
