@@ -6,12 +6,12 @@ OUTPUT_FILE = "sus_w.csv"
 
 def extract_data(db_path, output_path):
     """
-    Investigating recent(<24 hours) suspicous withdrawls of new low-liquidity crypto from the system 
+    Investigating recent(<24 hours) suspicous withdrawlas of new low-liquidity crypto from the system 
     """
 
     query = """
     SELECT 
-        wd.withdrawal_id, wd.user_id, wd.amount, wd.tx_hash, wd.created_at
+        wd.withdrawal_id, wd.user_id, wd.amount, wd.tx_hash, wd.created_at, u.user_id
     FROM 
         users u
     JOIN 
@@ -19,7 +19,7 @@ def extract_data(db_path, output_path):
     WHERE 
         wd.asset = 'AETH' 
         AND wd.status = 'success' 
-        AND amount >= 1000 
+        AND wd.amount >= 1000 
         AND wd.created_at >= datetime('now', '-24 hours')
     """
 
